@@ -44,6 +44,7 @@ class Tag(models.Model):
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE
     )
+    objects = BaseUserManager()
 
     def __str__(self):
         return self.name
@@ -56,6 +57,7 @@ class Ingredient(models.Model):
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE
     )
+    objects = BaseUserManager()
 
     def __str__(self):
         return self.name
